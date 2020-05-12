@@ -1,0 +1,8 @@
+{
+  "name": "ionic-angular-course",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "577cb919"
+}

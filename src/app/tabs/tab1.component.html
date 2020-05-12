@@ -1,0 +1,36 @@
+<ion-content>
+
+    <ion-grid style="background-color:#113447; color:white;text-align: center ;min-height:100%">
+        <ion-row>
+
+            <ion-col style="text-align: center">
+                <span><img style="width: 50%;" src="/assets/quvo_blanco.png" /></span>
+            </ion-col>
+        </ion-row>
+        <form (submit)="handleSubmit($event,dniInput.value)">
+
+            <ion-item>
+                <ion-label position="floating">DNI</ion-label>
+                <ion-input type="number" max="99999999" required="true" #dniInput></ion-input>
+            </ion-item>
+
+            <p style="font-size:92%;color:#82bde7">Solo números <br />Todo junto<br />Ej: 20111333</p>
+           
+            <ion-button disabled="{{loading}}" class="boton" type="submit" shape="undefined" style="width:80%;margin-top:0.5rem"
+            color="primary">
+          <ion-label>
+                     ACEPTAR
+                </ion-label>
+            </ion-button>
+            <div style="margin-top:0.5rem"><ion-spinner color="light"  *ngIf="loading"></ion-spinner> </div>
+        </form>
+
+
+    </ion-grid>
+
+
+
+</ion-content>
+<ion-footer style=" background-color:#679bd1; text-align: center ">
+    <img src="/assets/senado_blanco.png" style="width:40%" />
+</ion-footer>

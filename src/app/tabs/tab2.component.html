@@ -1,0 +1,60 @@
+<ion-content>
+
+    <ion-grid style=" background-color: #113447; color: white; text-align: center ">
+        <ion-row>
+            <ion-col style="text-align: center">
+                <img style="width: 50%" src="/assets/quvo_blanco.png" />
+            </ion-col>
+
+        </ion-row>
+
+
+        <p style="font-size: 110%;font-weight: 500;">EN BREVE UN VERIFICADOR SE PONDRÁ EN CONTACTO Y LE SOLICITARÁ EL
+            SIGUIENTE CÓDIGO PARA VALIDAR LA APLICACIÓN
+        </p>
+
+        <p style="font-size:75%">vencimiento: {{ horaVencimiento }}</p>
+    </ion-grid>
+
+    <ion-grid style=" background-color: #679bd1; color: white; text-align: center">
+        <span style=" font-size: 450%; font-weight: 600 ">{{ tokenVerificacion }}</span>
+
+
+
+    </ion-grid>
+    <ion-grid style="padding-top:0.7rem; background-color: white; text-align: center ">
+        <ion-row>
+            <ion-col style="text-align: center">
+                <ion-button disabled="{{loading}}" (click)="verificar()" class="boton"
+                    shape="undefined" style="width:95%;margin-top:0.5rem" color="primary">
+                    <ion-label>
+                        VERIFICAR
+                    </ion-label>
+                </ion-button>
+            </ion-col>
+            <ion-col style="text-align: center">
+                <ion-button  (click)="back()" class="boton"
+                    shape="undefined" style="width:95%;margin-top:0.5rem" color="primary">
+                    <ion-label>
+                        VOLVER
+                    </ion-label>
+                </ion-button>
+                
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <div style="margin-top:0.5rem;text-align: center;width:100%;padding-top: 0.5rem;">
+                <ion-spinner  *ngIf="loading"></ion-spinner>
+            </div>
+
+        </ion-row>
+
+    </ion-grid>
+
+
+</ion-content>
+
+
+<ion-footer style="background-color: white; text-align: center">
+    <img style="width:40%" src="/assets/senado_azul.png" />
+</ion-footer>

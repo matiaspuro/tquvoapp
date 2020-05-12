@@ -1,0 +1,18 @@
+{
+  "appId": "com.tquvo.app",
+  "appName": "ionic-angular-course",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": { 
+    "allowNavigation": [
+     "67.205.184.72"
+    ]
+  },
+  "cordova": {}
+}

@@ -1,0 +1,43 @@
+<ion-content>
+
+  <ion-grid style=" background-color:#113447; color: white; text-align: center ">
+    <ion-row>
+      <ion-col style=" text-align: center">
+        <img style=" width:43% " src="/assets/quvo_blanco.png" />
+      </ion-col>
+    </ion-row>
+
+    <h2>{{ nombre }}</h2>
+    <p>DNI {{ dni }}<br />
+      {{ email }}</p>
+
+
+    <p style="font-size:75%">vencimiento: {{ horaVencimientoToken }} </p>
+  </ion-grid>
+
+  <ion-grid style=" background-color:#679bd1; color:white; text-align:center">
+    <span style=" font-size: 450%; font-weight: 600 ">{{ tokenPublico }}</span>
+
+
+
+  </ion-grid>
+  <ion-grid style=" padding-top:0.7rem; background-color: #82bde7; color: white; text-align: center">
+    <span style=" font-size: 120%; letter-spacing: 0.2rem ">Senador</span>
+  </ion-grid>
+
+  <ion-grid style=" padding-top:0.7rem; background-color: white; color: white; text-align: center ">
+    <ion-button disabled="{{ loading }}" (click)="verificar()" class="boton" shape="undefined"
+      style="width: 50%;margin-top:0.5rem" color="primary">
+      <ion-label>
+        RENOVAR
+      </ion-label>
+    </ion-button>
+    <div style="margin-top:0.5rem;text-align: center;width:100%;padding-top: 0.5rem;">
+      <ion-spinner color="dark" *ngIf="loading"></ion-spinner>
+    </div>
+  </ion-grid>
+
+</ion-content>
+<ion-footer style=" background-color: white; text-align: center">
+  <img style=" width: '40%' " src="/assets/senado_azul.png" />
+</ion-footer>
